@@ -1,0 +1,150 @@
+{
+ "configs": [
+   "/config.json",
+   "/lang/lang.ru.json",
+   "/white_list.json"
+ ],
+ "title": "Visitor statistics system",
+ "class":"col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6",
+"headers":"Test Footer",
+"content": [
+
+  {
+   "type": "h5",
+   "title": "Senso №1",
+   "class":"alert-warning"
+  },
+{
+"type": "text",
+"style":"float:right;margin-right:10px",
+"title": "Battery level"
+},
+
+{
+"type": "h4",
+"title": "Адрес сервера :",
+"style":"width:50%"
+},
+ {
+"type": "text",
+"title": "100%",
+"class":"alert alert-success",
+"style":"float:right;text-align:center;opacity: 0.85;width: 90px; height: 40px;"
+},
+
+{
+"type":"input",
+"style":"width:50%",
+"state":"testserver.com",
+
+"name":"number"
+},
+{
+"type": "h4",
+"title": "Порт :",
+"style":"width:50%;"
+},
+{
+"type":"input",
+"style":"width:50%;margin:2% 0%;",
+"state":"8000",
+
+"name":"number"
+},
+
+{
+"type":"button",
+"title":"Сохранить",
+"action":"/number?num=[[number]]",
+"class": "btn btn-block btn-success",
+"style":"width:25%;display:inline"
+},
+
+
+{"type":"hr"},
+
+{
+"type": "h4",
+"title": "Логин",
+
+"style":"width:25%;display:inline"
+},
+
+{
+"type": "h4",
+"title": "Пароль",
+
+"style":"width:25%;display:inline;margin:125px"
+},
+
+{
+"type": "text",
+"title": ""
+
+},
+
+{
+"type": "input",
+"state": "login",
+"name":"during",
+
+"style":"width:25%;display:inline"
+},
+
+{
+"type": "password",
+"state": "password",
+"name":"count",
+
+"style":"width:25%;display:inline;margin: 0px 35px"
+},
+
+{
+"type": "button",
+"title": "Сохранить",
+"class":"btn btn-block btn-success",
+"style":"width:25%;margin: 10px 0px",
+"action": "/count?count=[[count]]&during=[[during]]"
+},
+
+
+{"type":"hr"},
+{
+"type": "h4",
+"title": "Частота передачи даных на сервер(в минутах)",
+
+"style":"width:50%;"
+},
+
+
+
+{
+"type": "input",
+"state": "60",
+"name":"count",
+
+"style":"width:25%;"
+},
+
+{
+"type": "button",
+"title": "Сохранить",
+"class":"btn btn-block btn-success",
+"style":"width:25%;margin: 10px 0px",
+"action": "/count?count=[[count]]&during=[[during]]"
+},
+
+{"type":"hr"},
+
+{
+ "type": "link",
+"style":"width:50%",
+"title":"Настройки сети",
+"action":"/index.htm?setup",
+"class": "btn btn-block btn-info"
+}
+
+
+ ]
+
+}
