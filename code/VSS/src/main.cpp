@@ -1,10 +1,18 @@
 
-#include <Arduino.h>
-// change
-void setup() {
-  // put your setup code here, to run once:
+
+#include <set.h>
+
+void setup()
+{
+    FS_init();
+    HTTP_init();
+    WIFIinit();
+    OTA_init();
+    configSetup = readFile("config.json", 4096);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+    HTTP.handleClient();
+    ArduinoOTA.handle();
 }
