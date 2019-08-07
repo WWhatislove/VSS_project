@@ -11,17 +11,25 @@
 #include <ESP8266HTTPUpdateServer.h>
 #include <SoftwareSerial.h>
 
-SoftwareSerial SIM800(13, 15); // RX, TX
 
-ESP8266HTTPUpdateServer httpUpdater;
+#ifndef CONFIG_VARIBLEDS
 
+#define CONFIG_VARIBLEDS
 String configSetup = "{}";
-String configJson = "{}";
 String white_list = "{}";
-int port = 80;
-
 ESP8266WebServer HTTP(80);
 File fsUploadFile;
+ESP8266HTTPUpdateServer httpUpdater;
+
+#else 
+
+extern String configSetup = "{}";
+extern String white_list = "{}";
+/* extern ESP8266WebServer HTTP(80);
+extern File fsUploadFile;
+extern ESP8266HTTPUpdateServer httpUpdater;*/
+
+#endif
 
 // all functions in this project
 
