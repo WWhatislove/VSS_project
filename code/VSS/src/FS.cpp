@@ -1,5 +1,5 @@
 #include <set.h>
-extern ESP8266WebServer HTTP;
+
 void FS_init(void)
 {
   SPIFFS.begin();
@@ -85,7 +85,6 @@ bool handleFileRead(String path)
 
 void handleFileUpload()
 {
-  File fsUploadFile;
   if (HTTP.uri() != "/edit")
     return;
   HTTPUpload &upload = HTTP.upload();

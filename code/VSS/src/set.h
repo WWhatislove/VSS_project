@@ -1,4 +1,5 @@
 #include <Arduino.h>
+
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
@@ -10,6 +11,27 @@
 #include <ESP8266HTTPUpdateServer.h>
 #include <SoftwareSerial.h>
 
+
+#ifndef CONFIG_VARIBLEDS
+
+#define CONFIG_VARIBLEDS
+String configSetup = "{}";
+String white_list = "{}";
+ESP8266WebServer HTTP(80);
+File fsUploadFile;
+ESP8266HTTPUpdateServer httpUpdater;
+
+#else 
+
+extern String configSetup = "{}";
+extern String white_list = "{}";
+/* extern ESP8266WebServer HTTP(80);
+extern File fsUploadFile;
+extern ESP8266HTTPUpdateServer httpUpdater;*/
+
+#endif
+
+// all functions in this project
 
 //File system
 void FS_init(void);

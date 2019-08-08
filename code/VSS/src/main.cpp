@@ -1,11 +1,9 @@
 
 
 #include <set.h>
-ESP8266WebServer HTTP(80);
-String configSetup = "{}";
+
 void setup()
 {
-   
     FS_init();
     HTTP_init();
     WIFIinit();
