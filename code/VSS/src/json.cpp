@@ -1,12 +1,12 @@
 #include <set.h>
-
+extern String configSetup;
 String jsonRead(String &json, String name)
 {
   DynamicJsonBuffer jsonBuffer;
   JsonObject &root = jsonBuffer.parseObject(json);
   return root[name].as<String>();
 }
-
+/* 
 bool whiteNumber(String number)
 {
   for (int i = 0; i < sizeJson(white_list); i++)
@@ -27,7 +27,7 @@ void removeNumber(int index)
   white_list = "";
   root.printTo(white_list);
   writeFile("white_list.json", white_list);
-}
+}*/
 
 int sizeJson(String &json)
 {

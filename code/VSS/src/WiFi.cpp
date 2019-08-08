@@ -1,5 +1,5 @@
 #include <set.h>
-
+extern String configSetup;
 void reconn_wifi()
 {
   String _ssid = jsonRead(configSetup, "ssid");
@@ -37,7 +37,7 @@ void reconn_wifi()
 
 void WIFIinit()
 {
-
+  extern ESP8266WebServer HTTP;
   HTTP.on("/ssid", HTTP_GET, []() {
     jsonWrite(configSetup, "ssid", HTTP.arg("ssid"));
     jsonWrite(configSetup, "password", HTTP.arg("password"));
