@@ -1,5 +1,6 @@
 #include <set.h>
-
+extern ESP8266WebServer HTTP;
+extern String configSetup;
 void reconn_wifi()
 {
   String _ssid = jsonRead(configSetup, "ssid");

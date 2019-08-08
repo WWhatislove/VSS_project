@@ -1,7 +1,9 @@
 #include <set.h>
-
+extern ESP8266WebServer HTTP;
+File fsUploadFile;
 void FS_init(void)
 {
+  
   SPIFFS.begin();
   {
     Dir dir = SPIFFS.openDir("/");
